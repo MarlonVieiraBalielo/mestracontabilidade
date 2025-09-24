@@ -1,0 +1,130 @@
+
+
+// Banner
+.banner {
+  background-image: url("../images/bg-fundo.jpg");
+  background-size: cover;
+  background-position: center;
+  color: $white;
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  
+  .btn {
+    background-color: $white;
+    color: $primary;
+    font-weight: bold;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  // Responsividade: Ajustar o tamanho da imagem e texto para telas pequenas
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  // Estilo para telas pequenas (Mobile First)
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .btn {
+      font-size: 1rem;
+      padding: 12px 25px;
+    }
+
+    .banner .row {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .banner .col-md-6 {
+      margin-bottom: 20px;
+    }
+  }
+}
+.numeros{
+    padding: 5px;
+    background-color: $white;
+    border-radius: 15px;
+}
+
+
+.hero-title {
+  color: $primary;
+  letter-spacing: -0.02em;
+}
+
+.profile-card {
+  border: 1px solid rgba($primary, .08);
+}
+
+.feature-card {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+
+  .card-title {
+    margin-top: .25rem;
+    font-weight: 700;
+  }
+
+  .feature-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: .75rem;
+    background: $primary-bg-subtle;
+    color: $primary;
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.75rem 1.25rem rgba(0,0,0,.08);
+    border-color: rgba($primary, .25);
+  }
+}
+
+.btn-lg {
+  border-radius: .9rem;
+}
+
+img.rounded-4 { border-radius: 1rem !important; }
+
+@media (max-width: 991.98px) {
+  .profile-card { margin-top: .5rem; }
+}

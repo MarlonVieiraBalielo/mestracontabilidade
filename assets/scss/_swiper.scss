@@ -1,0 +1,38 @@
+.process {
+  .btn-pill{
+    background: rgba($primary, .12);
+    color: #1d1d1f;
+    border-radius: 999px;
+    padding: .8rem 1.1rem;
+    border: 1px solid rgba($primary,.15);
+    font-weight: 600;
+    display: inline-flex; gap: .5rem; align-items: center;
+    &:hover{ border-color: rgba($primary,.35) }
+    &.active{ background: $primary; color: #fff; }
+  }
+
+  .card{ border-radius: 1.25rem; }
+
+  .stepper{
+    display:flex; align-items:center; justify-content:center; gap: .75rem;
+    .line{
+      flex:1; height:4px; border-radius: 4px; background: rgba($primary,.15);
+    }
+    .step{
+      position:relative;
+      width:74px; height:74px; border-radius:50%;
+      display:grid; place-items:center; font-size:1.35rem;
+      background: $primary; color:#fff; box-shadow:0 0 0 6px rgba($primary,.18);
+      span{
+        position:absolute; right:-8px; top:50%; transform:translateY(-50%);
+        background:#e9ecef; color:#333; font-weight:700; width:34px; height:34px;
+        border-radius:999px; display:grid; place-items:center;
+        border:1px solid #d0d0d0;
+      }
+      &.active{ box-shadow:0 0 0 6px rgba($primary,.28); }
+    }
+  }
+}
+
+#exitIntentModal .modal-content{ border-radius: 1rem; }
+#exitIntentModal .bg-light{ background: #f4effb !important; } /* roxinho suave opcional */

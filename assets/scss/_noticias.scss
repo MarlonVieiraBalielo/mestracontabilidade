@@ -1,0 +1,66 @@
+
+
+.news-aside{
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba($secondary,.95), rgba($primary,.75));
+  box-shadow: 0 18px 40px rgba(0,0,0,.08);
+  position: relative;
+  overflow: hidden;
+
+  .badge{ letter-spacing: .02em; }
+}
+.news-aside-bg{
+  position:absolute; inset:auto -30% -35% auto; width: 110%; height: 70%;
+  background:
+    radial-gradient(60% 60% at 30% 30%, rgba(255,255,255,.25) 0, transparent 60%),
+    radial-gradient(40% 40% at 80% 20%, rgba(255,255,255,.18) 0, transparent 60%);
+  filter: blur(12px);
+  z-index:1;
+}
+
+.card-feature{
+  border: 0; border-radius: 16px; position: relative;
+  overflow: hidden; background: #111;
+  box-shadow: 0 18px 40px rgba(0,0,0,.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+
+  &:hover{ transform: translateY(-2px); box-shadow: 0 24px 56px rgba(0,0,0,.12); }
+}
+.card-feature-media img,
+.card-news-media img{ width:100%; height:100%; object-fit:cover; display:block; }
+.card-feature-fallback{ background: linear-gradient(180deg,$secondary,$primary); }
+
+.card-feature-overlay{
+  position:absolute; left:0; right:0; bottom:0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(0,0,0,.65) 55%, rgba(0,0,0,.85) 100%);
+  color:#fff;
+}
+
+.card-news{
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  box-shadow: 0 8px 22px rgba(0,0,0,.04);
+
+  &:hover{
+    transform: translateY(-3px);
+    border-color: rgba($primary,.35);
+    box-shadow: 0 14px 30px rgba(0,0,0,.08);
+  }
+
+  .card-body{ padding: 16px 18px 8px; }
+  .card-footer{ padding-top: 0; }
+}
+.py-8{ padding-top:4rem; padding-bottom:4rem; }
+.g-4{ --bs-gutter-x:1.5rem; --bs-gutter-y:1.5rem; }
+
+.ratio-16x9 {
+  --bs-aspect-ratio: 56.25%;
+}
+
+@media (min-width: 992px) {
+  .ratio-16x9 {
+    --bs-aspect-ratio: 27.25%;
+  }
+}
